@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/ico" href="https://cdn.glitch.com/cbbe5c66-fe51-47a6-bbe2-3980fcee7aef%2Fcbbe5c66_fe51_47a6_bbe2_3980fcee7aef_icon_72x72_1BV_icon.ico?v=1565967154822">
+    <title>Skript Editor</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Skript editor is a tool that allows you to edit the language designed for minecraft, skript, with autocorrect and error formatting."/>
+    <meta name="theme-color" content="#ffce8f"/>
+    <link rel="manifest" href="/manifest.json">
+  </head>
+  <body>
+    <input type="file" id="fileElem" multiple accept=".sk, .txt" style="display:none" onchange="handleFiles(this.files)">
+    <div class="header">
+      <img id="file" class="button" alt="Folders" src="images/file.svg" width="50" height="50">
+      <img id="import" class="button" alt="Upload File(s)" src="images/upload.svg" width="50" height="50">
+      <img id="export" class="button" alt="Download File" src="images/download.svg" width="50" height="50">
+      <img id="customize" class="button" alt="Customize" src="images/brush.svg" width="50" height="50">
+      <img id="options" class="button" alt="Options" src="images/options.svg" width="50" height="50">
+      <img id="link" class="button" alt="ShortURL" src="images/link.svg" width="50" height="50">
+      <img id="share" class="button" alt="Share" src="https://cdn.glitch.com/cbbe5c66-fe51-47a6-bbe2-3980fcee7aef%2Fbaseline-screen_share-24px.svg?v=1565795450778" width="50" height="50">
+      <img id="discord" class="button" alt="Discord" src="images/discord.svg" width="50" height="50">
+      <img id="home" class="button" alt="Add to Home Screen" src="images/home.svg" width="50" height="50">
+      <img id="toggleMode" class="button" alt="Blockly/Text mode" src="images/blockly.svg" width="50" height="50">
+    </div>
+    <div class="sidenav">
+      <p>
+        (coming soon!)
+      </p>
+    </div>
+    <div class="main">
+      <div class="compile-code">
+        <pre name="code" id="editor" style="border: none;"></pre>
+      </div>
+    </div>
+    <table>
+    <tr>
+      <td id="blocklyArea">
+      </td>
+    </tr>
+  </table>
+
+  <div id="blocklyDiv" style="position: absolute"></div>
+
+  {{> toolbox}}
+    <div class="footer">
+        {{> footer}}
+    </div>
+    <div class="modal themes-modal">
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <select id="theme">
+          {{> select}}
+        </select>
+      </div>
+    </div>
+    <div class="modal options-modal">
+      <div class="modal-content">
+        {{> settings}}
+      </div>
+    </div>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="lib/toast.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js" integrity="sha256-nRoO8HoupfqozUr7YKBRgHXmdx40Hl/04OSBzv7e7L8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha256-KsRuvuRtUVvobe66OFtOQfjP8WA2SzYsmm4VPfMnxms=" crossorigin="anonymous"></script>
+    <script src="ace/ace.js"></script>
+    <script src="lib/codeblast.js"></script>
+    <script src="ace/ext-split.js"></script>
+    <script src="ace/ext-language_tools.js"></script>
+    <script src="lib/toast.js"></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="/blocks/blockly_compressed.js"></script>
+    <script src="/blocks/blocks_compressed.js"></script>
+    <script src="blocks/py.js"></script>
+    <script src="/blocks/msg/js/en.js"></script>
+    <script>
+    if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.js', {scope: '/'})
+      }
+    </script>
+  </body>
+</html>

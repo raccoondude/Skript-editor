@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+body, html {
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+table {
+  margin-top: 50px;
+  margin-left: 160px;
+  width: calc(100% - 160px);
+  height: calc(100vh - 50px - 18px);
+}
+
+.blocklyWorkspace {
+  width: 200px;
+}
+#editor {
+  margin-top: 50px;
+  margin-left: 160px;
+  width: calc(100% - 160px);
+  height: calc(100vh - 50px - 18px);
+  font-size: 13px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  padding: 1px;
+  padding-left: 5px;
+  height: 18px;
+  background-color: #7abbff;
+  color: black;
+  width: 100%;
+  z-index: 20;
+  font-size: 13px;
+  font-family: 'Inconsolata', monospace;
+}
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 10px;
+  padding-left: 5px;
+  color: white;
+  font-family: Monospace;
+  font-family: 'Inconsolata', monospace;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 160px;
+  text-align: left;
+  background-color: #e8e8e8;
+  width: 100%;
+  height: 50px;
+  z-index: 20;
+  font-size: 9px;
+}
+.button {
+  transition: 200ms all;
+}
+.button:hover {
+  transform: scale(1.1);
+  background-color: white;
+  border-radius: 10px;
+}
+.button:active {
+  transform: scale(1.2);
+}
+.files-header {
+  font-size: 20px;
+}
+.modal {
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  font-family: 'Inconsolata', monospace;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+  font-family: 'Inconsolata', monospace;
+}
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.close-button:hover {
+  background-color: darkgray;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  font-family: 'Inconsolata', monospace;
+}
+
+#blocklyArea {
+  height: 99%;  
+}

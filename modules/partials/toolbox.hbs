@@ -1,0 +1,104 @@
+<xml id="toolbox" style="display: none">
+  <category id="catLogic" colour="210" name="Logic">
+    <block type="controls_if"></block>
+    <block type="logic_compare"></block>
+    <block type="logic_operation"></block>
+    <block type="logic_negate"></block>
+    <block type="logic_boolean"></block>
+    <block type="logic_ternary"></block>
+  </category>
+  <category id="catLoops" colour="120" name="Loops">
+    <block type="controls_repeat_ext">
+      <value name="TIMES">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="controls_whileUntil"></block>
+  </category>
+  <category id="catMath" colour="230" name="Math">
+    <block type="math_number"></block>
+    <block type="math_arithmetic">
+      <value name="A">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="B">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+  <category id="catText" colour="160" name="Text">
+    <block type="text"></block>
+    <block type="text_print">
+      <value name="TEXT">
+        <shadow type="text">
+          <field name="TEXT">abc</field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+  <sep></sep>
+  <category id="catVariables" colour="330" custom="VARIABLE" name="Variables"></category>
+</xml>
+<xml id="blocklyDefault" style="display: none">
+  <block type="variables_set">
+    <field name="VAR">Count</field>
+    <value name="VALUE">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+  <block type="controls_whileUntil" x="16" y="16">
+    <field name="MODE">WHILE</field>
+    <value name="BOOL">
+      <block type="logic_compare">
+        <field name="OP">LTE</field>
+        <value name="A">
+          <block type="variables_get">
+            <field name="VAR">Count</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="text_print">
+        <value name="TEXT">
+          <block type="text">
+            <field name="TEXT">Hello World!</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set">
+            <field name="VAR">Count</field>
+            <value name="VALUE">
+              <block type="math_arithmetic">
+                <field name="OP">ADD</field>
+                <value name="A">
+                  <block type="variables_get">
+                    <field name="VAR">Count</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

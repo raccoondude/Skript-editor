@@ -1,0 +1,57 @@
+{
+  "short_name": "skEditor",
+  "name": "Skript Editor",
+  "description": "An app to edit Skript!",
+  "version": "0.1",
+  "manifest_version": 2,
+  "icons": [
+    {
+      "src": "images/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.glitch.com/cbbe5c66-fe51-47a6-bbe2-3980fcee7aef%2Ficon-144x144.png?v=1563456517622",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.glitch.com/cbbe5c66-fe51-47a6-bbe2-3980fcee7aef%2Ficon-512x512.png?v=1563456518365",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/app",
+  "offline_enabled": true,
+  "permissions": [
+    "unlimitedStorage"
+  ],
+  "background_color": "#000",
+  "theme_color": "#fff",
+  "display": "standalone"
+}

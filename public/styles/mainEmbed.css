@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+body {
+  margin: 0;
+  overflow: hidden;
+}
+#editor {
+  margin: 0;
+  width: 100%;
+  height: calc(100vh - 18px);
+  font-size: 13px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  padding: 1px;
+  padding-left: 5px;
+  height: 18px;
+  background-color: #7ABBFF;
+  color: black;
+  width: 100%;
+  z-index: 20;
+  font-size: 13px;
+  font-family: 'Inconsolata', monospace;
+}

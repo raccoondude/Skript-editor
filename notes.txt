@@ -1,0 +1,22 @@
+Assets:
+https://sweetalert2.github.io/#input-types
+https://socket.io/
+https://ireade.github.io/Toast.js/
+https://cdnjs.com/
+
+/Share/ can now tell when a user logs in
+
+/share/ tells that a user has logged in vi toast.js
+
+/share/ tells that a user has disconnected via toast
+
+
+
+WHEN user clicker 'share' THEN create room ALSO create link tied to room
+
+WHEN user opens share link THEN check link ID and check if link ID is tied to a room, if not send http404
+
+----------------------------------------------------------------------------------------------------------------
+
+Add copywrite notice
+Register copywrite for the package

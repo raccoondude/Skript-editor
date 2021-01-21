@@ -16,7 +16,7 @@
     "hbs": "^4.0.4",
     "helmet": "^3.20.0",
     "marked": "^0.7.0",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "lz-string": "^1.4.4"
   },
   "engines": {
